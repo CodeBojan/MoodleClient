@@ -28,7 +28,7 @@ namespace MoodleAPI
         //Returns the contents of a page.
 
         private string _username = "bojanramic";
-        private string _password = "password";
+        private string _password = "truthisworthpursuing1";
         private string _service = "moodle_mobile_app";
 
         private string _parameterSeparator = "&";
@@ -48,7 +48,18 @@ namespace MoodleAPI
             Files = new List<FileDTO>();
             Forums = new List<ForumDTO>();
             Urls = new List<UrlDTO>();
-            NumberOfCourses = GetEnrolledCoursesAndNum();
+            if (_token != null)
+            {
+                NumberOfCourses = GetEnrolledCoursesAndNum();
+                for(int i = 0; i < Courses.Count; i++)
+                {
+                    GetCourseFileContents(Courses[i].Id);
+                }
+                Console.WriteLine(Files);
+            }
+            else
+                throw new InvalidTokenException("Token is invalid!");
+
         }
         public MoodleDownloader(string baseUrl)
         {
@@ -68,7 +79,7 @@ namespace MoodleAPI
             Stream resStream = response.GetResponseStream();
             StreamReader reader = new StreamReader(resStream);
             string contents = reader.ReadToEnd();
-
+            //Console.WriteLine(contents);
             var user = JsonConvert.DeserializeObject<List<User>>(contents).FirstOrDefault();
 
             url = _baseUrl;
@@ -111,7 +122,6 @@ namespace MoodleAPI
             }
 
             GetForums(courseIds);
-
         }
 
         private string GetToken()
