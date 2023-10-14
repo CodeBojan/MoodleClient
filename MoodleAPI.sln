@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoodleAPI", "MoodleAPI\MoodleAPI.csproj", "{AC9FB2F4-5EDE-4853-8AA6-685070D794E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC9FB2F4-5EDE-4853-8AA6-685070D794E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC9FB2F4-5EDE-4853-8AA6-685070D794E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC9FB2F4-5EDE-4853-8AA6-685070D794E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC9FB2F4-5EDE-4853-8AA6-685070D794E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F2F0454-D7A2-48C9-B446-59BA07F362E3}
+	EndGlobalSection
+EndGlobal
